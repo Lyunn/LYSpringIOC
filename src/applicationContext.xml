@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="dateSource" class="com.ly.pojo.DateSource">
+		<property name="driver" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql:///test"></property>
+		<property name="maxCon" value="5"></property>
+	</bean>
+	
+	<bean id="sessionFactory" class="com.ly.pojo.SessionFactory">
+		<property name="name" value="session"></property>
+		<property name="dateSource" ref="dateSource"></property>
+	</bean>
+</beans>
+
+	
+
